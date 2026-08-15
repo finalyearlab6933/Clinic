@@ -1,0 +1,819 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 760px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(255, 70, 0, 0.35),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 85% 40%,
+      rgba(255, 30, 0, 0.18),
+      transparent 25%
+    ),
+
+    #080a1c;
+}
+
+
+.hero-container {
+  max-width: 1450px;
+
+  min-height: 670px;
+
+  margin: auto;
+
+  padding: 70px 35px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    48% 52%;
+
+  align-items: center;
+}
+
+
+/* =========================
+   LEFT
+========================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 5;
+}
+
+
+.welcome-badge {
+  display: inline-block;
+
+  padding: 9px 18px;
+
+  border: 1px solid
+    rgba(255, 80, 0, 0.7);
+
+  border-radius: 30px;
+
+  color: #ff7a00;
+
+  font-size: 13px;
+
+  margin-bottom: 25px;
+
+  background: rgba(
+    255,
+    60,
+    0,
+    0.04
+  );
+}
+
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(
+    50px,
+    5vw,
+    76px
+  );
+
+  line-height: 1.1;
+
+     font-size: 55px;
+  letter-spacing: -2px;
+
+  color: white;
+}
+
+
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #ed1c24,
+    #ff7a00
+  );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font-style: italic;
+}
+
+
+.hero-description {
+  max-width: 620px;
+
+  margin-top: 25px;
+
+  color: #bfc1ca;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 32px;
+}
+
+
+.primary-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 17px 25px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    90deg,
+    #ed1c24,
+    #ff7a00
+  );
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 10px 35px rgba(
+      255,
+      60,
+      0,
+      0.25
+    );
+}
+
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px rgba(
+      255,
+      60,
+      0,
+      0.4
+    );
+}
+
+
+.video-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+
+.play-icon {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.4);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.hero-stats {
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 55px;
+
+  gap: 35px;
+}
+
+
+.patients {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.patient-images {
+  display: flex;
+}
+
+
+.patient-images div {
+  width: 35px;
+
+  height: 35px;
+
+  border-radius: 50%;
+
+  background: #ddd;
+
+  border: 2px solid
+    #080a1c;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-left: -8px;
+
+  font-size: 16px;
+}
+
+
+.patient-images div:first-child {
+  margin-left: 0;
+}
+
+
+.hero-stats strong {
+  display: block;
+
+  color: #ff6a00;
+
+  font-size: 18px;
+}
+
+
+.hero-stats small {
+  display: block;
+
+  color: #aaa;
+
+  margin-top: 3px;
+}
+
+
+.rating {
+  padding-left: 30px;
+
+  border-left: 1px solid
+    rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   DOCTOR AREA
+========================= */
+
+.hero-image-area {
+  position: relative;
+
+  height: 650px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+}
+
+
+.orange-circle {
+  position: absolute;
+
+  width: 560px;
+
+  height: 560px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #ff7800 0%,
+      #e62d18 55%,
+      transparent 70%
+    );
+
+  opacity: 0.75;
+
+  filter: blur(2px);
+}
+
+
+.doctor-image {
+  position: relative;
+
+  z-index: 3;
+
+  height: 600px;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 25px 45px
+      rgba(0, 0, 0, 0.5)
+    );
+}
+
+
+/* =========================
+   FLOATING CARDS
+========================= */
+
+.floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 17px 22px;
+
+  min-width: 180px;
+
+  border-radius: 15px;
+
+  background: rgba(
+    35,
+    37,
+    52,
+    0.85
+  );
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 15px 40px rgba(
+      0,
+      0,
+      0,
+      0.3
+    );
+}
+
+
+.card-icon {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #ed1c24,
+    #ff7a00
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+}
+
+
+.floating-card strong {
+  display: block;
+
+  color: white;
+
+  font-size: 28px;
+}
+
+
+.floating-card span {
+  display: block;
+
+  color: #c5c5cc;
+
+  font-size: 11px;
+
+  margin-top: 3px;
+}
+
+
+.experience {
+  top: 80px;
+
+  right: 30px;
+}
+
+
+.specialist {
+  top: 260px;
+
+  right: -10px;
+}
+
+
+.patients-card {
+  bottom: 70px;
+
+  right: 30px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-preview {
+  background: #080a1c;
+
+  padding: 75px 0 90px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.05);
+}
+
+
+.services-container {
+  max-width: 1370px;
+
+  margin: auto;
+
+  padding: 0 35px;
+}
+
+
+.services-heading {
+  display: flex;
+
+  align-items: end;
+
+  justify-content: space-between;
+
+  margin-bottom: 45px;
+}
+
+
+.section-label {
+  color: #ff6a00;
+
+  border: 1px solid
+    rgba(255, 80, 0, 0.5);
+
+  padding: 8px 18px;
+
+  border-radius: 25px;
+
+  font-size: 12px;
+}
+
+
+.services-heading h2 {
+  margin-top: 20px;
+
+  color: white;
+
+  font-size: 36px;
+}
+
+
+.services-heading h2 span {
+  color: #ff6200;
+}
+
+
+.services-right {
+  max-width: 400px;
+}
+
+
+.services-right p {
+  color: #aaa;
+
+  line-height: 1.6;
+}
+
+
+.services-right a {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding: 12px 20px;
+
+  border: 1px solid #ff6200;
+
+  border-radius: 25px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   SERVICE CARDS
+========================= */
+
+.service-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 18px;
+}
+
+
+.service-card {
+  min-height: 240px;
+
+  padding: 25px 18px;
+
+  text-align: center;
+
+  border-radius: 18px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.12);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 33, 50, 0.9),
+      rgba(10, 12, 30, 0.9)
+    );
+
+  transition: 0.3s;
+}
+
+
+.service-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #ff6200;
+
+  box-shadow:
+    0 15px 35px rgba(
+      255,
+      80,
+      0,
+      0.12
+    );
+}
+
+
+.service-icon {
+  width: 55px;
+
+  height: 55px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #ed1c24,
+    #ff7a00
+  );
+
+  color: white;
+
+  font-size: 23px;
+}
+
+
+.service-card h3 {
+  color: white;
+
+  font-size: 17px;
+}
+
+
+.service-card p {
+  color: #999;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+.service-card button {
+  width: 32px;
+
+  height: 32px;
+
+  margin-top: 10px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #7c271b;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-image-area {
+    height: 550px;
+  }
+
+  .doctor-image {
+    height: 500px;
+  }
+
+  .service-cards {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .hero {
+    padding-top: 75px;
+  }
+
+  .hero-container {
+    padding:
+      50px 20px 0;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+  }
+
+  .rating {
+    padding-left: 0;
+
+    border-left: none;
+  }
+
+  .hero-image-area {
+    height: 430px;
+  }
+
+  .doctor-image {
+    height: 420px;
+  }
+
+  .orange-circle {
+    width: 380px;
+
+    height: 380px;
+  }
+
+  .floating-card {
+    transform: scale(0.75);
+  }
+
+  .experience {
+    top: 30px;
+
+    right: -20px;
+  }
+
+  .specialist {
+    top: 160px;
+
+    right: -30px;
+  }
+
+  .patients-card {
+    bottom: 20px;
+
+    right: -20px;
+  }
+
+  .services-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .services-heading h2 {
+    font-size: 28px;
+  }
+
+  .service-cards {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+}

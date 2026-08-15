@@ -1,0 +1,418 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+
+  background: rgba(8, 10, 28, 0.92);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  z-index: 1000;
+}
+
+
+.header-container {
+  max-width: 1450px;
+
+  height: 100%;
+
+  margin: auto;
+
+  padding: 0 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  min-width: 220px;
+}
+
+
+.logo-icon {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 27px;
+
+  font-weight: bold;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #ed1c24,
+    #ff7a00
+  );
+
+  box-shadow:
+    0 0 20px rgba(255, 80, 0, 0.35);
+}
+
+
+.logo-text {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+
+.logo-main {
+  font-size: 22px;
+
+  font-weight: 800;
+
+  color: white;
+
+  letter-spacing: 0.5px;
+}
+
+
+.logo-main strong {
+  background: linear-gradient(
+    90deg,
+    #ed1c24,
+    #ff7a00
+  );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.logo-sub {
+  margin-top: 6px;
+
+  font-size: 10px;
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 7px 12px;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.025
+  );
+
+  border-radius: 40px;
+}
+
+
+.navbar a {
+  position: relative;
+
+  padding: 12px 17px;
+
+  color: #e7e7ed;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+
+.navbar a:hover {
+  color: white;
+}
+
+
+.navbar a.active {
+  color: white;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.09
+  );
+
+  border-radius: 30px;
+}
+
+
+.navbar a.active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -1px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 25px;
+
+  height: 2px;
+
+  background: #ff5a00;
+
+  border-radius: 10px;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.header-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.phone {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: white;
+}
+
+
+.phone-icon {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.15);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+
+.phone strong {
+  display: block;
+
+  font-size: 14px;
+}
+
+
+.phone small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #aaa;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   APPOINTMENT BUTTON
+========================= */
+
+.header-appointment {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 15px 22px;
+
+  border-radius: 30px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  background: linear-gradient(
+    90deg,
+    #ed1c24,
+    #ff7a00
+  );
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 8px 25px rgba(
+      255,
+      70,
+      0,
+      0.2
+    );
+}
+
+
+.header-appointment:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(
+      255,
+      70,
+      0,
+      0.35
+    );
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu-btn {
+  display: none;
+
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.06
+  );
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+  .navbar {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .header {
+    height: 75px;
+  }
+
+  .header-container {
+    padding: 0 18px;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .header-appointment {
+    padding: 12px 15px;
+
+    font-size: 12px;
+  }
+
+  .logo {
+    min-width: auto;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .logo-main {
+    font-size: 18px;
+  }
+
+  .logo-sub {
+    font-size: 8px;
+  }
+
+}
