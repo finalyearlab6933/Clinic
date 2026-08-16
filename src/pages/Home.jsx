@@ -178,10 +178,7 @@ function Home() {
                   variant="solid"
                   size="md"
                 />
-                <div className="floating-stat__body">
-                  <strong>5000+</strong>
-                  <span>Happy Patients</span>
-                </div>
+               
               </Card>
             </div>
 
