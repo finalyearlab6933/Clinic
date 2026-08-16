@@ -122,7 +122,7 @@ function Home() {
             {/* Doctor image */}
 
             <img 
-              src="../public/doctor.png"
+              src="../src/assets/hero.png"
               alt="Doctor"
               className="doctor-image"
             />
