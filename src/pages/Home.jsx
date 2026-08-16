@@ -179,7 +179,7 @@ function Home() {
                   ariaLabel="Health shield pulse"
                 />
               </div>
-              <div className="hero-trust-card__body">
+              <div className="hero-trust-card__body" style="margin-top:10px;">
                 <strong>Your Health, Our Priority</strong>
                 <small>Safe, trusted, and quality care</small>
                 <small>for a better tomorrow.</small>
