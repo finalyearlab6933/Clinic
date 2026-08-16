@@ -168,15 +168,6 @@ function Home() {
                   <span>Specialists</span>
                 </div>
               </Card>
-
-              <Card className="floating-stat" padding="md">
-                <IconCircle
-                  icon={<Users size={20} />}
-                  variant="solid"
-                  size="md"
-                />
-               
-              </Card>
             </div>
 
             {/* Trust card at bottom-left */}
