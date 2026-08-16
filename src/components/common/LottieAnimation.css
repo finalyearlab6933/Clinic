@@ -1,0 +1,22 @@
+/* ============================================================
+   LottieAnimation — wrapper styles
+   ============================================================ */
+
+.lottie-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.lottie-wrap > div {
+  width: 100%;
+  height: 100%;
+}
+
+.lottie-wrap svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

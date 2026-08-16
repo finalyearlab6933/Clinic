@@ -1,0 +1,73 @@
+/* ============================================================
+   Card — theme-aware surface
+   ============================================================ */
+
+.card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--duration-normal) var(--ease-emphasized),
+    box-shadow var(--duration-normal) var(--ease-emphasized),
+    border-color var(--duration-normal) var(--ease-emphasized);
+  will-change: transform;
+}
+
+/* ─── Variants ──────────────────────────────────────────── */
+.card--default {
+  background-color: var(--color-bg-card);
+  border-color: var(--color-border);
+}
+
+.card--outlined {
+  background-color: transparent;
+  border-color: var(--color-border);
+  box-shadow: none;
+}
+
+.card--elevated {
+  background-color: var(--color-bg-card);
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+}
+
+.card--soft {
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-border-subtle);
+  box-shadow: none;
+}
+
+/* ─── Padding ───────────────────────────────────────────── */
+.card--p-sm {
+  padding: var(--space-4);
+}
+.card--p-md {
+  padding: var(--space-6);
+}
+.card--p-lg {
+  padding: var(--space-7);
+}
+.card--p-none {
+  padding: 0;
+}
+
+/* ─── Interactive (hoverable cards) ─────────────────────── */
+.card--interactive {
+  cursor: pointer;
+}
+.card--interactive:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary-border);
+  box-shadow: var(--shadow-md);
+}
+.card--interactive:active {
+  transform: scale(var(--press-scale));
+}
+
+/* Micro-interaction: child SVG icons nudge subtly on hover */
+.card--interactive svg {
+  transition: transform var(--duration-fast) var(--ease-emphasized);
+}
+.card--interactive:hover svg {
+  transform: scale(1.08);
+}

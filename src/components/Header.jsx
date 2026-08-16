@@ -1,122 +1,91 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
+import { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { Phone, CalendarCheck, Menu, X, Stethoscope } from 'lucide-react';
+
+import Button from './common/Button';
+import './Header.css';
+
+const NAV_ITEMS = [
+  { to: '/', label: 'Home', end: true },
+  { to: '/about', label: 'About' },
+  { to: '/specialists', label: 'Specialists' },
+  { to: '/appointment', label: 'Appointment' },
+  { to: '/contact', label: 'Contact' },
+];
 
 function Header() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="header">
-
       <div className="header-container">
-
         {/* Logo */}
-        <Link
-          to="/"
-          className="logo"
-          onClick={closeMenu}
-        >
-
+        <Link to="/" className="logo" onClick={closeMenu}>
           <div className="logo-icon">
-            ✚
+            <Stethoscope size={22} strokeWidth={2.4} />
           </div>
-
           <div className="logo-text">
-
             <span className="logo-main">
-              CARE <strong>PLUS</strong>
+              CARE <span className="logo-accent">PLUS</span>
             </span>
-
-            <span className="logo-sub">
-              CLINIC
-            </span>
-
+            <span className="logo-sub">CLINIC</span>
           </div>
-
         </Link>
 
-
         {/* Navigation */}
-        <nav className={`navbar ${menuOpen ? "mobile-open" : ""}`}>
-
-          <Link to="/" onClick={closeMenu}>
-            Home
-          </Link>
-
-          <Link to="/about" onClick={closeMenu}>
-            About
-          </Link>
-
-          <Link to="/specialists" onClick={closeMenu}>
-            Specialists
-          </Link>
-
-          <Link to="/appointment" onClick={closeMenu}>
-            Appointment
-          </Link>
-
-          <Link to="/contact" onClick={closeMenu}>
-            Contact
-          </Link>
-
+        <nav className={`navbar ${menuOpen ? 'mobile-open' : ''}`}>
+          {NAV_ITEMS.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.end}
+              onClick={closeMenu}
+              className={({ isActive }) =>
+                isActive ? 'nav-link nav-link--active' : 'nav-link'
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
 
-
-        {/* Right Side */}
+        {/* Right side */}
         <div className="header-right">
-
-          {/* Phone */}
           <div className="phone">
-
             <div className="phone-icon">
-              ☎
+              <Phone size={18} strokeWidth={2.2} />
             </div>
-
-            <div>
-
-              <strong>
-                +91 98765 43210
-              </strong>
-
-              <small>
-                Mon - Sat (9:00AM - 8:00PM)
-              </small>
-
+            <div className="phone-text">
+              <strong>+91 98765 43210</strong>
+              <small>Mon – Sat (9:00 AM – 8:00 PM)</small>
             </div>
-
           </div>
 
-
-          {/* Book Appointment */}
-          <Link
+          <Button
+            as={Link}
             to="/appointment"
-            className="header-appointment"
+            variant="primary"
+            size="md"
+            leftIcon={<CalendarCheck size={16} strokeWidth={2.2} />}
+            className="header-cta"
             onClick={closeMenu}
           >
-            <span>▣</span>
             Book Appointment
-          </Link>
+          </Button>
 
-
-          {/* Mobile Menu */}
           <button
             className="menu-btn"
             type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle navigation"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={menuOpen}
           >
-            {menuOpen ? "✕" : "☰"}
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
-
         </div>
-
       </div>
-
     </header>
   );
 }

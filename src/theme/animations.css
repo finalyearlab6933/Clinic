@@ -1,0 +1,148 @@
+/* ============================================================
+   Animations — centralized keyframes & utility classes
+   ============================================================
+   Every animation in the application is defined here and
+   composed via className. Components MUST NOT declare inline
+   `animation:` properties; consume these utilities instead.
+
+   Only `transform` and `opacity` are animated (no layout
+   thrash). Stagger via inline CSS variable `--anim-delay`.
+
+   Reduced-motion users get all decorative motion disabled
+   via the global override in `variables.css`.
+   ============================================================ */
+
+/* ─── Keyframes ────────────────────────────────────────────── */
+
+@keyframes anim-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes anim-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes anim-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes anim-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes anim-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes anim-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes anim-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ─── Utility classes (only when user has not opted out) ──── */
+
+@media (prefers-reduced-motion: no-preference) {
+  .anim-fade-in-up {
+    animation: anim-fade-in-up var(--duration-medium) var(--ease-entrance)
+      both;
+  }
+
+  .anim-fade-in {
+    animation: anim-fade-in var(--duration-normal) var(--ease-entrance)
+      both;
+  }
+
+  .anim-scale-in {
+    animation: anim-scale-in var(--duration-normal) var(--ease-emphasized)
+      both;
+  }
+
+  .anim-slide-in-right {
+    animation: anim-slide-in-right var(--duration-medium)
+      var(--ease-emphasized) both;
+  }
+
+  .anim-shake {
+    animation: anim-shake 320ms var(--ease-standard) both;
+  }
+
+  .anim-pulse {
+    animation: anim-pulse 2.4s var(--ease-standard) infinite;
+  }
+
+  .anim-spin {
+    animation: anim-spin 0.9s linear infinite;
+  }
+}
+
+/* ─── Stagger helper ─────────────────────────────────────────
+   Set inline: style={{ '--anim-delay': '120ms' }} on children
+   so they cascade in sequence. Defaults to 0 (no delay).
+   ─────────────────────────────────────────────────────────── */
+.anim-stagger {
+  --anim-delay: 0ms;
+  animation-delay: var(--anim-delay);
+}

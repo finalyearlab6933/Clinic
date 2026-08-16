@@ -1,205 +1,197 @@
-import "./DoctorsSpecialists.css";
+import { Link } from 'react-router-dom';
+import {
+  HeartPulse,
+  Brain,
+  Bone,
+  Baby,
+  Smile,
+  Stethoscope,
+  CalendarCheck,
+} from 'lucide-react';
 
-const specialists = [
+import Button from '../components/common/Button';
+import Card from '../components/common/Card';
+import SectionTitle from '../components/common/SectionTitle';
+import IconCircle from '../components/common/IconCircle';
+import Badge from '../components/common/Badge';
+import AnimatedSection from '../components/common/AnimatedSection';
+
+import './DoctorsSpecialists.css';
+
+const SPECIALISTS = [
   {
-    icon: "♥",
-    name: "Cardiology",
-    description: "Expert care for heart and cardiovascular health."
+    icon: <HeartPulse size={26} strokeWidth={1.8} />,
+    name: 'Cardiology',
+    description:
+      'Expert care for heart and cardiovascular health.',
   },
   {
-    icon: "🧠",
-    name: "Neurology",
-    description: "Specialized care for brain and nervous system."
+    icon: <Brain size={26} strokeWidth={1.8} />,
+    name: 'Neurology',
+    description:
+      'Specialized care for brain and nervous system.',
   },
   {
-    icon: "🦴",
-    name: "Orthopedics",
-    description: "Bone, joint and muscle treatment."
+    icon: <Bone size={26} strokeWidth={1.8} />,
+    name: 'Orthopedics',
+    description:
+      'Bone, joint and muscle treatment.',
   },
   {
-    icon: "👶",
-    name: "Pediatrics",
-    description: "Complete healthcare for children."
+    icon: <Baby size={26} strokeWidth={1.8} />,
+    name: 'Pediatrics',
+    description: 'Complete healthcare for children.',
   },
   {
-    icon: "🦷",
-    name: "Dental Care",
-    description: "Modern dental care for healthy smiles."
+    icon: <Smile size={26} strokeWidth={1.8} />,
+    name: 'Dental Care',
+    description: 'Modern dental care for healthy smiles.',
   },
   {
-    icon: "+",
-    name: "General Medicine",
-    description: "Everyday healthcare for you and your family."
-  }
+    icon: <Stethoscope size={26} strokeWidth={1.8} />,
+    name: 'General Medicine',
+    description:
+      'Everyday healthcare for you and your family.',
+  },
 ];
 
-
-const doctors = [
+const DOCTORS = [
   {
-    name: "Dr. Arun Kumar",
-    specialty: "Cardiologist",
-    experience: "12 Years Experience",
-    image: "/assets/doctor1.jpg"
+    name: 'Dr. Arun Kumar',
+    specialty: 'Cardiologist',
+    experience: '12 Years Experience',
+    initials: 'AK',
   },
   {
-    name: "Dr. Priya Sharma",
-    specialty: "Neurologist",
-    experience: "10 Years Experience",
-    image: "/assets/doctor2.jpg"
+    name: 'Dr. Priya Sharma',
+    specialty: 'Neurologist',
+    experience: '10 Years Experience',
+    initials: 'PS',
   },
   {
-    name: "Dr. Rahul Raj",
-    specialty: "Orthopedic Specialist",
-    experience: "8 Years Experience",
-    image: "/assets/doctor3.jpg"
+    name: 'Dr. Rahul Raj',
+    specialty: 'Orthopedic Specialist',
+    experience: '8 Years Experience',
+    initials: 'RR',
   },
   {
-    name: "Dr. Anitha Kumar",
-    specialty: "Pediatrician",
-    experience: "9 Years Experience",
-    image: "/assets/doctor4.jpg"
-  }
+    name: 'Dr. Anitha Kumar',
+    specialty: 'Pediatrician',
+    experience: '9 Years Experience',
+    initials: 'AK',
+  },
 ];
-
 
 function DoctorsSpecialists() {
-
   return (
-
-    <section
+    <AnimatedSection
+      as="section"
       id="specialists"
       className="doctors-section"
+      delay={0}
     >
-
       <div className="doctors-container">
-
         {/* SPECIALISTS */}
-
-        <div className="specialists-heading">
-
-          <span>
-            OUR SPECIALISTS
-          </span>
-
-          <h2>
-            Expert Care Across
-            <strong> Every Specialty</strong>
-          </h2>
-
-          <p>
-            Our experienced medical specialists are
-            committed to providing personalized care
-            using modern treatment approaches.
-          </p>
-
-        </div>
-
+        <SectionTitle
+          align="center"
+          eyebrow="Our Specialists"
+          title={
+            <>
+              Expert Care Across{' '}
+              <span className="highlight">Every Specialty</span>
+            </>
+          }
+          subtitle="Our experienced medical specialists are committed to providing personalized care using modern treatment approaches."
+        />
 
         <div className="specialists-grid">
-
-          {specialists.map((specialist, index) => (
-
-            <div
+          {SPECIALISTS.map((s, idx) => (
+            <Card
+              key={s.name}
+              variant="default"
+              padding="lg"
+              interactive
               className="specialist-card"
-              key={index}
+              style={{ '--anim-delay': `${idx * 60}ms` }}
             >
-
-              <div className="specialist-icon">
-                {specialist.icon}
-              </div>
-
-              <h3>
-                {specialist.name}
-              </h3>
-
-              <p>
-                {specialist.description}
-              </p>
-
-              <button>
+              <IconCircle
+                icon={s.icon}
+                variant="solid"
+                size="lg"
+                className="specialist-icon"
+              />
+              <h3>{s.name}</h3>
+              <p>{s.description}</p>
+              <button className="specialist-arrow" aria-label={`Learn more about ${s.name}`}>
                 →
               </button>
-
-            </div>
-
+            </Card>
           ))}
-
         </div>
-
 
         {/* DOCTORS */}
-
-        <div
-          id="doctors"
-          className="doctors-heading"
-        >
-
-          <span>
-            OUR DOCTORS
-          </span>
-
-          <h2>
-            Meet Our
-            <strong> Experienced Doctors</strong>
-          </h2>
-
-          <p>
-            Skilled professionals who combine medical
-            expertise with compassionate patient care.
-          </p>
-
+        <div className="doctors-heading-wrap">
+          <SectionTitle
+            align="center"
+            eyebrow="Our Doctors"
+            title={
+              <>
+                Meet Our{' '}
+                <span className="highlight">Experienced Doctors</span>
+              </>
+            }
+            subtitle="Skilled professionals who combine medical expertise with compassionate patient care."
+          />
         </div>
-
 
         <div className="doctors-grid">
-
-          {doctors.map((doctor, index) => (
-
-            <div
+          {DOCTORS.map((d) => (
+            <Card
+              key={d.name}
+              variant="default"
+              padding="none"
+              interactive
               className="doctor-card"
-              key={index}
             >
-
               <div className="doctor-photo">
-
-                <img
-                  src={doctor.image}
-                  alt={doctor.name}
-                />
-
-                <div className="doctor-experience">
-                  {doctor.experience}
+                <div className="doctor-avatar">
+                  <span>{d.initials}</span>
                 </div>
-
+                <Badge
+                  variant="primary"
+                  size="sm"
+                  className="doctor-experience"
+                >
+                  {d.experience}
+                </Badge>
               </div>
-
 
               <div className="doctor-info">
+                <h3>{d.name}</h3>
+                <Badge variant="primary" size="sm" className="doctor-specialty">
+                  {d.specialty}
+                </Badge>
 
-                <h3>
-                  {doctor.name}
-                </h3>
-
-                <p>
-                  {doctor.specialty}
-                </p>
-
-                <a href="#appointment">
-                  Book Appointment →
-                </a>
-
+                <div className="doctor-actions">
+                  <Button
+                    as={Link}
+                    to="/appointment"
+                    variant="primary"
+                    size="sm"
+                    leftIcon={<CalendarCheck size={14} />}
+                  >
+                    Book
+                  </Button>
+                  <Button variant="ghost" size="sm">
+                    View Profile
+                  </Button>
+                </div>
               </div>
-
-            </div>
-
+            </Card>
           ))}
-
         </div>
-
       </div>
-
-    </section>
-
+    </AnimatedSection>
   );
 }
 

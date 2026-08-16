@@ -1,337 +1,378 @@
-import clinic from "../assets/clinic.webp";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import {
+  HeartPulse,
+  Brain,
+  Bone,
+  Baby,
+  Smile,
+  Stethoscope,
+  CalendarCheck,
+  PlayCircle,
+  Award,
+  Star,
+  Users,
+  ShieldCheck,
+  Quote,
+} from 'lucide-react';
 
-import "./Home.css";
+import Button from '../components/common/Button';
+import Card from '../components/common/Card';
+import SectionTitle from '../components/common/SectionTitle';
+import Stat from '../components/common/Stat';
+import IconCircle from '../components/common/IconCircle';
+import LottieAnimation from '../components/common/LottieAnimation';
+import AnimatedSection from '../components/common/AnimatedSection';
+import { heartbeat, trustPulse } from '../theme/lottie/animations';
+import clinic from '../assets/clinic.webp';
+
+import './Home.css';
+
+const SERVICES = [
+  {
+    icon: <HeartPulse size={24} strokeWidth={2} />,
+    title: 'Cardiology',
+    text: 'Complete heart care with advanced technology.',
+  },
+  {
+    icon: <Brain size={24} strokeWidth={2} />,
+    title: 'Neurology',
+    text: 'Expert care for brain, spine and nervous system.',
+  },
+  {
+    icon: <Bone size={24} strokeWidth={2} />,
+    title: 'Orthopedics',
+    text: 'Bone, joint and muscle care for active life.',
+  },
+  {
+    icon: <Baby size={24} strokeWidth={2} />,
+    title: 'Pediatrics',
+    text: 'Comprehensive healthcare for your little ones.',
+  },
+  {
+    icon: <Smile size={24} strokeWidth={2} />,
+    title: 'Dental Care',
+    text: 'Complete dental care for healthy smiles.',
+  },
+  {
+    icon: <Stethoscope size={24} strokeWidth={2} />,
+    title: 'General Medicine',
+    text: 'Expert general physicians for everyday care.',
+  },
+];
 
 function Home() {
-
   return (
-
     <>
-
       {/* =========================
           HERO
       ========================= */}
-
-      <section id="home" className="hero">
-
+      <AnimatedSection as="section" id="home" className="hero" delay={0}>
+        <div className="hero-bg" aria-hidden="true" />
         <div className="hero-container">
-
-          {/* LEFT CONTENT */}
-
+          {/* LEFT */}
           <div className="hero-content">
+            <span className="welcome-badge">
+              <span className="welcome-badge__dot" />
+              Welcome to Care Plus Clinic
+            </span>
 
-            <div className="welcome-badge">
-              ❤️ Welcome to Care Plus Clinic
-            </div>
-
-
-            <h1>
+            <h1 className="hero-title">
               Compassionate Care,
               <br />
-
-              <span>
-                Better Health
-              </span>
+              <span className="hero-title__accent">Better Health</span>
             </h1>
 
-
             <p className="hero-description">
-              Expert doctors, advanced technology,
-              and personalized care for you and
-              your family.
+              Expert doctors, advanced technology, and personalized
+              care for you and your family.
             </p>
 
-
             <div className="hero-buttons">
+              <Button
+                as={Link}
+                to="/appointment"
+                variant="primary"
+                size="lg"
+                leftIcon={<CalendarCheck size={18} />}
+              >
+                Book Appointment
+              </Button>
 
-              <Link
-  to="/appointment"
-  className="primary-btn"
->
-  <span>▣</span>
-  Book Appointment
-</Link>
-
-
-              <button className="video-btn">
-
-                <span className="play-icon">
-                  ▶
-                </span>
-
+              <Button
+                variant="ghost"
+                size="lg"
+                leftIcon={
+                  <span className="play-icon-circle">
+                    <PlayCircle size={36} strokeWidth={1.6} />
+                  </span>
+                }
+              >
                 Watch Video
-
-              </button>
-
+              </Button>
             </div>
 
-
-            {/* STATS */}
-
-            <div className="hero-stats">
-
-              <div className="patients">
-
-                <div className="patient-images">
-
-                  <div>👨</div>
-                  <div>👩</div>
-                  <div>👨</div>
-                  <div>👩</div>
-
+            <div className="hero-trust">
+              <div className="hero-trust__item">
+                <div className="hero-trust__avatars">
+                  <span>A</span>
+                  <span>P</span>
+                  <span>R</span>
+                  <span>S</span>
                 </div>
-
                 <div>
-
-                  <strong>
-                    5,000+
-                  </strong>
-
-                  <small>
-                    Happy Patients
-                  </small>
-
+                  <strong>5,000+</strong>
+                  <small>Happy Patients</small>
                 </div>
-
               </div>
 
+              <div className="hero-trust__divider" />
 
-              <div className="rating">
-
-                <strong>
-                  ★ 4.8/5
-                </strong>
-
-                <small>
-                  Patient Rating
-                </small>
-
+              <div className="hero-trust__item">
+                <div className="hero-trust__rating">
+                  <Star size={16} fill="currentColor" />
+                  <strong>4.8/5</strong>
+                </div>
+                <small>Patient Rating</small>
               </div>
-
             </div>
-
           </div>
 
-
-          {/* RIGHT DOCTOR */}
-
+          {/* RIGHT — clinic image with stat cards (reference layout) */}
           <div className="hero-image-area">
-
-            <div className="orange-circle"></div>
-
-
-            {/* clinic image */}
-
-            <img 
+            <div className="hero-glow" aria-hidden="true" />
+            <img
               src={clinic}
-              alt="Doctor"
-              className="doctor-image"
+              alt="Care Plus Clinic interior"
+              className="clinic-image"
             />
 
+            {/* Vertically stacked stat cards on the right */}
+            <div className="stat-stack">
+              <Card className="floating-stat" padding="md">
+                <IconCircle
+                  icon={<Award size={20} />}
+                  variant="solid"
+                  size="md"
+                />
+                <div className="floating-stat__body">
+                  <strong>12+</strong>
+                  <span>Years Experience</span>
+                </div>
+              </Card>
 
-            {/* EXPERIENCE CARD */}
+              <Card className="floating-stat" padding="md">
+                <IconCircle
+                  icon={<Star size={20} />}
+                  variant="solid"
+                  size="md"
+                />
+                <div className="floating-stat__body">
+                  <strong>8+</strong>
+                  <span>Specialists</span>
+                </div>
+              </Card>
 
-            <div className="floating-card experience">
-
-              <div className="card-icon">
-                ♙
-              </div>
-
-              <div>
-
-                <strong>
-                  12+
-                </strong>
-
-                <span>
-                  Years Experience
-                </span>
-
-              </div>
-
+              <Card className="floating-stat" padding="md">
+                <IconCircle
+                  icon={<Users size={20} />}
+                  variant="solid"
+                  size="md"
+                />
+                <div className="floating-stat__body">
+                  <strong>5000+</strong>
+                  <span>Happy Patients</span>
+                </div>
+              </Card>
             </div>
 
-
-            {/* SPECIALIST CARD */}
-
-            <div className="floating-card specialist">
-
-              <div className="card-icon">
-                ★
+            {/* Trust card at bottom-left */}
+            <Card variant="default" padding="md" className="hero-trust-card">
+              <div className="hero-trust-card__icon">
+                <LottieAnimation
+                  animationData={trustPulse}
+                  size={32}
+                  ariaLabel="Health shield pulse"
+                />
               </div>
-
-              <div>
-
-                <strong>
-                  8+
-                </strong>
-
-                <span>
-                  Specialists
-                </span>
-
+              <div className="hero-trust-card__body">
+                <strong>Your Health, Our Priority</strong>
+                <small>Safe, trusted, and quality care</small>
+                <small>for a better tomorrow.</small>
               </div>
-
-            </div>
-
-
-            {/* PATIENT CARD */}
-
-            <div className="floating-card patients-card">
-
-              <div className="card-icon">
-                👥
+              <div className="hero-trust-card__ecg" aria-hidden="true">
+                <LottieAnimation
+                  animationData={heartbeat}
+                  size={70}
+                  ariaLabel="Heartbeat line"
+                />
               </div>
-
-              <div>
-
-                <strong>
-                  5,000+
-                </strong>
-
-                <span>
-                  Patients Served
-                </span>
-
-              </div>
-
-            </div>
-
+            </Card>
           </div>
-
         </div>
+      </AnimatedSection>
 
-      </section>
-
+      {/* =========================
+          TRUST STRIP
+      ========================= */}
+      <AnimatedSection as="section" className="trust-strip" delay={80}>
+        <div className="trust-strip__container">
+          <div className="trust-strip__item">
+            <ShieldCheck size={20} />
+            <div>
+              <strong>Safe, trusted & quality care</strong>
+              <small>For a better tomorrow</small>
+            </div>
+          </div>
+          <div className="trust-strip__divider" />
+          <div className="trust-strip__item">
+            <Award size={20} />
+            <span>Expert Doctors</span>
+          </div>
+          <div className="trust-strip__item">
+            <Stethoscope size={20} />
+            <span>Advanced Care</span>
+          </div>
+          <div className="trust-strip__item">
+            <HeartPulse size={20} />
+            <span>Patient Focused</span>
+          </div>
+          <div className="trust-strip__item">
+            <Clock size={20} />
+            <span>24/7 Support</span>
+          </div>
+        </div>
+      </AnimatedSection>
 
       {/* =========================
           SERVICES PREVIEW
       ========================= */}
-
-      <section className="services-preview">
-
+      <AnimatedSection as="section" className="services-preview" delay={120}>
         <div className="services-container">
-
-          <div className="services-heading">
-
-            <div>
-
-              <span className="section-label">
-                OUR SERVICES
-              </span>
-
-              <h2>
-                Comprehensive Care For Your{" "}
-                <span>
-                  Better Health
-                </span>
-              </h2>
-
-            </div>
-
-
-            <div className="services-right">
-
-              <p>
-                We offer a wide range of medical
-                services to ensure your good health
-                and well-being.
-              </p>
-
-              <a href="#specialists">
+          <SectionTitle
+            eyebrow="Our Services"
+            title={
+              <>
+                Comprehensive Care For Your{' '}
+                <span className="highlight">Better Health</span>
+              </>
+            }
+            subtitle="We offer a wide range of medical services to ensure your good health and well-being."
+            action={
+              <Button as={Link} to="/specialists" variant="outline" size="md">
                 View All Services →
-              </a>
-
-            </div>
-
-          </div>
-
+              </Button>
+            }
+          />
 
           <div className="service-cards">
+            {SERVICES.map((s) => (
+              <Card
+                key={s.title}
+                variant="default"
+                padding="lg"
+                interactive
+                className="service-card"
+              >
+                <IconCircle
+                  icon={s.icon}
+                  variant="light"
+                  size="lg"
+                  className="service-icon"
+                />
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+                <button className="service-arrow" aria-label={`Learn more about ${s.title}`}>
+                  →
+                </button>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
 
-            <Service
-              icon="♥"
-              title="Cardiology"
-              text="Complete heart care with advanced technology."
+      {/* =========================
+          TESTIMONIAL / STATS
+      ========================= */}
+      <AnimatedSection as="section" className="stats-section" delay={160}>
+        <div className="stats-container">
+          <SectionTitle
+            align="center"
+            eyebrow="Why Choose Us"
+            title={
+              <>
+                Healthcare that puts{' '}
+                <span className="highlight">patients first</span>
+              </>
+            }
+          />
+
+          <div className="stats-grid">
+            <Stat
+              value="12+"
+              label="Years Experience"
+              icon={<Award size={18} />}
+              variant="soft"
             />
-
-            <Service
-              icon="🧠"
-              title="Neurology"
-              text="Expert care for brain, spine and nervous system."
+            <Stat
+              value="8+"
+              label="Specialists"
+              icon={<Stethoscope size={18} />}
+              variant="soft"
             />
-
-            <Service
-              icon="🦴"
-              title="Orthopedics"
-              text="Bone, joint and muscle care for active life."
+            <Stat
+              value="5,000+"
+              label="Happy Patients"
+              icon={<Users size={18} />}
+              variant="soft"
             />
-
-            <Service
-              icon="👶"
-              title="Pediatrics"
-              text="Comprehensive healthcare for your little ones."
+            <Stat
+              value="4.8/5"
+              label="Patient Rating"
+              icon={<Star size={18} />}
+              variant="soft"
             />
-
-            <Service
-              icon="🦷"
-              title="Dental Care"
-              text="Complete dental care for healthy smiles."
-            />
-
-            <Service
-              icon="+"
-              title="General Medicine"
-              text="Expert general physicians for everyday care."
-            />
-
           </div>
 
+          <Card variant="elevated" padding="lg" className="quote-card">
+            <Quote size={32} className="quote-card__icon" />
+            <p className="quote-card__text">
+              “Care Plus Clinic gave my family the kind of attention
+              and professionalism we had never experienced before.
+              Every visit feels personal, every doctor feels like they
+              genuinely care.”
+            </p>
+            <div className="quote-card__author">
+              <div className="quote-card__avatar">A</div>
+              <div>
+                <strong>Anitha R.</strong>
+                <small>Patient since 2021</small>
+              </div>
+            </div>
+          </Card>
         </div>
-
-      </section>
-
+      </AnimatedSection>
     </>
-
   );
-
 }
 
-
-/* Service Card Component */
-
-function Service({
-  icon,
-  title,
-  text
-}) {
-
+/* small icon helper for the trust strip clock */
+function Clock(props) {
   return (
-
-    <div className="service-card">
-
-      <div className="service-icon">
-        {icon}
-      </div>
-
-      <h3>
-        {title}
-      </h3>
-
-      <p>
-        {text}
-      </p>
-
-      <button>
-        →
-      </button>
-
-    </div>
-
+    <svg
+      {...props}
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </svg>
   );
-
 }
-
 
 export default Home;

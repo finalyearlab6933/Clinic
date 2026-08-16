@@ -1,0 +1,199 @@
+/* ============================================================
+   Design Tokens — CSS Custom Properties
+   ============================================================
+   This file is the ONLY place where raw color/typography values
+   are declared. Every component in the application consumes
+   these via `var(--token-name)`.
+
+   Changing the value here updates the entire application.
+
+   Future dynamic theming (API-driven primary color):
+   `document.documentElement.style.setProperty('--color-primary', apiPrimary)`
+   will re-skin the entire UI without any component changes.
+   ============================================================ */
+
+:root {
+  /* ─── Primary (teal — healthcare) ─────────────────────── */
+  --color-primary: #14b8a6;
+  --color-primary-hover: #0f9488;
+  --color-primary-active: #0b7e72;
+  --color-primary-soft: #5eead4;
+  --color-primary-bg: rgba(20, 184, 166, 0.06);
+  --color-primary-bg-strong: rgba(20, 184, 166, 0.12);
+  --color-primary-border: rgba(20, 184, 166, 0.22);
+  --color-primary-ring: rgba(20, 184, 166, 0.18);
+  --color-on-primary: #ffffff;
+
+  /* ─── Secondary (deep teal) ──────────────────────────── */
+  --color-secondary: #0f766e;
+  --color-secondary-hover: #115e59;
+
+  /* ─── Text ───────────────────────────────────────────── */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #94a3b8;
+  --color-text-on-dark: #f1f5f9;
+  --color-text-on-dark-muted: #cbd5e1;
+
+  /* ─── Surfaces ───────────────────────────────────────── */
+  --color-bg-page: #fbfcfd;
+  --color-bg-page-tint: rgba(20, 184, 166, 0.04);
+  --color-bg-card: #ffffff;
+  --color-bg-subtle: #f8fafc;
+  --color-bg-muted: #f1f5f9;
+
+  /* ─── Borders ────────────────────────────────────────── */
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+  --color-border-strong: #cbd5e1;
+
+  /* ─── Status (raw + soft-tinted backgrounds) ─────────── */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
+  --color-status-success-bg: #ecfdf5;
+  --color-status-success-text: #047857;
+  --color-status-warning-bg: #fffbeb;
+  --color-status-warning-text: #b45309;
+  --color-status-error-bg: #fef2f2;
+  --color-status-error-text: #b91c1c;
+  --color-status-info-bg: #eff6ff;
+  --color-status-info-text: #1d4ed8;
+  --color-status-primary-bg: rgba(20, 184, 166, 0.1);
+  --color-status-primary-text: #0f766e;
+
+  /* ─── Typography ─────────────────────────────────────── */
+  --font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI',
+    Roboto, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-base: 0.875rem;
+  --font-size-md: 0.9375rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.125rem;
+  --font-size-2xl: 1.375rem;
+  --font-size-3xl: 1.75rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.04em;
+
+  /* ─── Spacing ─────────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+
+  /* ─── Radius ──────────────────────────────────────────── */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ─── Shadows ─────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05),
+    0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.08);
+  --shadow-xl: 0 24px 60px rgba(15, 23, 42, 0.1);
+  --shadow-focus: 0 0 0 4px rgba(20, 184, 166, 0.18);
+  --shadow-primary: 0 8px 24px rgba(20, 184, 166, 0.25);
+  --shadow-primary-lg: 0 14px 40px rgba(20, 184, 166, 0.3);
+  --shadow-error: 0 0 0 4px rgba(239, 68, 68, 0.15);
+  --shadow-image: 0 25px 45px rgba(15, 23, 42, 0.12);
+
+  --color-bg-translucent: rgba(255, 255, 255, 0.92);
+
+  /* ─── White overlays (used on solid primary surfaces) ─── */
+  --color-white-overlay-soft: rgba(255, 255, 255, 0.15);
+  --color-white-overlay-medium: rgba(255, 255, 255, 0.45);
+  --color-white-overlay-strong: rgba(255, 255, 255, 0.85);
+
+  /* ─── Controls ────────────────────────────────────────── */
+  --control-height-sm: 36px;
+  --control-height-md: 44px;
+  --control-height-lg: 52px;
+
+  /* ─── Layout ──────────────────────────────────────────── */
+  --layout-max-width: 1320px;
+  --header-height: 76px;
+  --header-height-mobile: 68px;
+
+  /* ─── Transitions (generic) ──────────────────────────── */
+  --transition-fast: 120ms ease-out;
+  --transition-base: 180ms ease-out;
+  --transition-slow: 280ms ease-out;
+
+  /* ─── Animation tokens (centralized motion system) ────
+     Components reference these via `var(--duration-*)` and
+     `var(--ease-*)`. Only transform & opacity are animated
+     anywhere in the app, so motion stays on the compositor.
+     ───────────────────────────────────────────────────── */
+  --duration-instant: 80ms;
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-medium: 320ms;
+  --duration-slow: 480ms;
+  --duration-count: 900ms;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --ease-entrance: cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  --stagger-tight: 40ms;
+  --stagger-base: 80ms;
+  --stagger-loose: 140ms;
+
+  --press-scale: 0.97;
+  --hover-lift: -2px;
+
+  /* Shimmer gradient (used by Skeleton component) */
+  --shimmer-base: rgba(15, 23, 42, 0.04);
+  --shimmer-highlight: rgba(15, 23, 42, 0.09);
+}
+
+/* ============================================================
+   Global reduced-motion override
+   ============================================================
+   When the user prefers reduced motion, disable all decorative
+   animations and collapse transitions to ~1ms. Functional state
+   feedback (hover, focus, error) is preserved by setting
+   transitions back to the original token values.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

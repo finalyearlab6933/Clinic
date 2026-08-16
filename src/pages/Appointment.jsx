@@ -1,304 +1,241 @@
-import "./Appointment.css";
+import {
+  Phone,
+  Mail,
+  Clock,
+  CalendarCheck,
+  ShieldCheck,
+  Sparkles,
+} from 'lucide-react';
+
+import Button from '../components/common/Button';
+import Card from '../components/common/Card';
+import IconCircle from '../components/common/IconCircle';
+import TextField from '../components/common/TextField';
+import AnimatedSection from '../components/common/AnimatedSection';
+
+import './Appointment.css';
+
+const SPECIALIST_OPTIONS = [
+  'Cardiology',
+  'Neurology',
+  'Orthopedics',
+  'Pediatrics',
+  'Dental Care',
+  'General Medicine',
+];
+
+const DOCTOR_OPTIONS = [
+  'Dr. Arun Kumar',
+  'Dr. Priya Sharma',
+  'Dr. Rahul Raj',
+  'Dr. Anitha Kumar',
+];
+
+const TIME_SLOTS = [
+  '09:00 AM',
+  '10:00 AM',
+  '11:00 AM',
+  '02:00 PM',
+  '03:00 PM',
+  '04:00 PM',
+  '05:00 PM',
+];
 
 function Appointment() {
-
   return (
-
-    <section
+    <AnimatedSection
+      as="section"
       id="appointment"
       className="appointment-section"
+      delay={0}
     >
-
       <div className="appointment-container">
-
-        {/* LEFT */}
-
+        {/* LEFT — info */}
         <div className="appointment-content">
+          <span className="appointment-eyebrow">Book An Appointment</span>
 
-          <span>
-            BOOK AN APPOINTMENT
-          </span>
-
-          <h2>
-            Your Health
-            <strong> Matters To Us.</strong>
+          <h2 className="appointment-title">
+            Your Health{' '}
+            <span className="highlight">Matters To Us.</span>
           </h2>
 
-          <p>
-            Schedule an appointment with our experienced
-            doctors. Submit your request and our clinic
-            team will contact you to confirm your appointment.
+          <p className="appointment-lead">
+            Schedule an appointment with our experienced doctors.
+            Submit your request and our clinic team will contact you
+            to confirm your appointment.
           </p>
 
-
           <div className="appointment-info">
-
-            <div>
-              <span>📞</span>
-
+            <div className="info-row">
+              <IconCircle
+                icon={<Phone size={18} />}
+                variant="light"
+                size="md"
+              />
               <div>
                 <small>Call Us</small>
                 <strong>+91 98765 43210</strong>
               </div>
             </div>
 
-
-            <div>
-              <span>✉</span>
-
+            <div className="info-row">
+              <IconCircle
+                icon={<Mail size={18} />}
+                variant="light"
+                size="md"
+              />
               <div>
                 <small>Email</small>
                 <strong>careplus@gmail.com</strong>
               </div>
             </div>
 
-
-            <div>
-              <span>🕐</span>
-
+            <div className="info-row">
+              <IconCircle
+                icon={<Clock size={18} />}
+                variant="light"
+                size="md"
+              />
               <div>
                 <small>Working Hours</small>
-                <strong>Mon - Sat | 9 AM - 8 PM</strong>
+                <strong>Mon – Sat | 9 AM – 8 PM</strong>
               </div>
             </div>
-
           </div>
 
+          <Card variant="soft" padding="md" className="appointment-trust">
+            <IconCircle
+              icon={<ShieldCheck size={20} />}
+              variant="solid"
+              size="md"
+            />
+            <div>
+              <strong>Your Health, Our Priority</strong>
+              <small>Safe, trusted &amp; quality care</small>
+            </div>
+          </Card>
         </div>
 
+        {/* RIGHT — form */}
+        <Card variant="elevated" padding="lg" className="appointment-form-box">
+          <div className="form-header">
+            <IconCircle
+              icon={<CalendarCheck size={20} />}
+              variant="light"
+              size="md"
+            />
+            <div>
+              <h3>Book Your Appointment</h3>
+              <p>Fill in your details below</p>
+            </div>
+          </div>
 
-        {/* FORM */}
-
-        <div className="appointment-form-box">
-
-          <h3>
-            Book Your Appointment
-          </h3>
-
-          <p>
-            Fill in your details below
-          </p>
-
-
-          <form>
+          <form onSubmit={(e) => e.preventDefault()} className="appointment-form">
+            <div className="form-row">
+              <TextField
+                label="Patient Name"
+                placeholder="Enter your name"
+                required
+              />
+              <TextField
+                label="Phone Number"
+                type="tel"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
 
             <div className="form-row">
-
-              <div className="form-group">
-
-                <label>
-                  Patient Name
-                </label>
-
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                />
-
-              </div>
-
-
-              <div className="form-group">
-
-                <label>
-                  Phone Number
-                </label>
-
-                <input
-                  type="tel"
-                  placeholder="Enter phone number"
-                />
-
-              </div>
-
+              <TextField
+                label="Email"
+                type="email"
+                placeholder="Enter email"
+                required
+              />
+              <TextField
+                label="Age"
+                type="number"
+                placeholder="Age"
+                min="0"
+                max="120"
+              />
             </div>
-
 
             <div className="form-row">
+              <TextField
+                label="Specialist"
+                as="select"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select Specialist
+                </option>
+                {SPECIALIST_OPTIONS.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </TextField>
 
-              <div className="form-group">
-
-                <label>
-                  Email
-                </label>
-
-                <input
-                  type="email"
-                  placeholder="Enter email"
-                />
-
-              </div>
-
-
-              <div className="form-group">
-
-                <label>
-                  Age
-                </label>
-
-                <input
-                  type="number"
-                  placeholder="Age"
-                />
-
-              </div>
-
+              <TextField
+                label="Doctor"
+                as="select"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select Doctor
+                </option>
+                {DOCTOR_OPTIONS.map((d) => (
+                  <option key={d} value={d}>
+                    {d}
+                  </option>
+                ))}
+              </TextField>
             </div>
-
 
             <div className="form-row">
-
-              <div className="form-group">
-
-                <label>
-                  Specialist
-                </label>
-
-                <select>
-
-                  <option>
-                    Select Specialist
+              <TextField label="Appointment Date" type="date" />
+              <TextField
+                label="Preferred Time"
+                as="select"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select Time
+                </option>
+                {TIME_SLOTS.map((t) => (
+                  <option key={t} value={t}>
+                    {t}
                   </option>
-
-                  <option>
-                    Cardiology
-                  </option>
-
-                  <option>
-                    Neurology
-                  </option>
-
-                  <option>
-                    Orthopedics
-                  </option>
-
-                  <option>
-                    Pediatrics
-                  </option>
-
-                  <option>
-                    Dental Care
-                  </option>
-
-                  <option>
-                    General Medicine
-                  </option>
-
-                </select>
-
-              </div>
-
-
-              <div className="form-group">
-
-                <label>
-                  Doctor
-                </label>
-
-                <select>
-
-                  <option>
-                    Select Doctor
-                  </option>
-
-                  <option>
-                    Dr. Arun Kumar
-                  </option>
-
-                  <option>
-                    Dr. Priya Sharma
-                  </option>
-
-                  <option>
-                    Dr. Rahul Raj
-                  </option>
-
-                  <option>
-                    Dr. Anitha Kumar
-                  </option>
-
-                </select>
-
-              </div>
-
+                ))}
+              </TextField>
             </div>
 
+            <TextField
+              label="Reason for Visit"
+              as="textarea"
+              rows={4}
+              placeholder="Briefly describe your reason for visit"
+            />
 
-            <div className="form-row">
-
-              <div className="form-group">
-
-                <label>
-                  Appointment Date
-                </label>
-
-                <input type="date" />
-
-              </div>
-
-
-              <div className="form-group">
-
-                <label>
-                  Preferred Time
-                </label>
-
-                <select>
-
-                  <option>
-                    Select Time
-                  </option>
-
-                  <option>09:00 AM</option>
-                  <option>10:00 AM</option>
-                  <option>11:00 AM</option>
-                  <option>02:00 PM</option>
-                  <option>03:00 PM</option>
-                  <option>04:00 PM</option>
-                  <option>05:00 PM</option>
-
-                </select>
-
-              </div>
-
-            </div>
-
-
-            <div className="form-group">
-
-              <label>
-                Reason for Visit
-              </label>
-
-              <textarea
-                rows="4"
-                placeholder="Briefly describe your reason for visit"
-              ></textarea>
-
-            </div>
-
-
-            <button
+            <Button
               type="submit"
-              className="submit-appointment"
+              variant="primary"
+              size="lg"
+              fullWidth
+              rightIcon={<Sparkles size={16} />}
             >
-              Confirm Appointment →
-            </button>
+              Confirm Appointment
+            </Button>
 
-
-            <small className="form-note">
-              Your appointment will be confirmed by
-              the clinic after review.
-            </small>
-
+            <p className="form-note">
+              Your appointment will be confirmed by the clinic after
+              review.
+            </p>
           </form>
-
-        </div>
-
+        </Card>
       </div>
-
-    </section>
-
+    </AnimatedSection>
   );
 }
 

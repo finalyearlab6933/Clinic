@@ -1,0 +1,51 @@
+/* ============================================================
+   Skeleton — shimmer placeholder
+   ============================================================ */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--shimmer-base) 0%,
+    var(--shimmer-highlight) 50%,
+    var(--shimmer-base) 100%
+  );
+  background-size: 200% 100%;
+  border-radius: var(--radius-md);
+  display: block;
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skeleton {
+    animation: anim-shimmer 1.6s linear infinite;
+  }
+}
+
+.skeleton--text {
+  height: 12px;
+  width: 100%;
+  border-radius: var(--radius-pill);
+  margin-bottom: 8px;
+}
+
+.skeleton-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.skeleton--card {
+  height: 120px;
+  width: 100%;
+}
+
+.skeleton--circle {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.skeleton--image {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
