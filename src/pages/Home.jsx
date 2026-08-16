@@ -1,6 +1,6 @@
-import doctor from "../assets/doctor.png";
+import clinic from "../assets/clinic.webp";
 import { Link } from "react-router-dom";
-<img src={doctor} alt="Doctor" />
+
 import "./Home.css";
 
 function Home() {
@@ -121,10 +121,10 @@ function Home() {
             <div className="orange-circle"></div>
 
 
-            {/* Doctor image */}
+            {/* clinic image */}
 
             <img 
-              src={doctor}
+              src={clinic}
               alt="Doctor"
               className="doctor-image"
             />

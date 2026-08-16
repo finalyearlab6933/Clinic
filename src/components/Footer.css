@@ -1,10 +1,10 @@
 .footer {
-  background: #070918;
+  background: #071A2B;
 
   border-top: 1px solid
-    rgba(255, 255, 255, 0.08);
+    rgba(56, 189, 248, 0.12);
 
-  color: white;
+  color: #F1F5F9;
 }
 
 
@@ -60,17 +60,17 @@
 
   font-weight: bold;
 
-  color: white;
+  color: #f9f4f1;
 
   background: linear-gradient(
     135deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 
   box-shadow:
     0 8px 25px
-    rgba(255, 70, 0, 0.25);
+    rgba(20, 184, 166, 0.25);
 }
 
 
@@ -82,7 +82,7 @@
 
 
 .footer-logo-text > span {
-  color: white;
+  color: #F1F5F9;
 
   font-size: 20px;
 
@@ -93,12 +93,12 @@
 
 
 .footer-logo-text strong {
-  color: #ff6900;
+  color: #14B8A6;
 }
 
 
 .footer-logo-text small {
-  color: #777;
+  color: #64748B;
 
   font-size: 9px;
 
@@ -117,9 +117,9 @@
 
   margin-top: 22px;
 
-  color: #858796;
+  color: #cad4e3;
 
-  font-size: 13px;
+  font-size: 15px;
 
   line-height: 1.8;
 }
@@ -153,28 +153,28 @@
 
   text-decoration: none;
 
-  color: #aaa;
+   color:white;
 
   font-size: 14px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.1);
+    rgba(56, 189, 248, 0.15);
 
-  background: #101226;
+  background: #0B6E99;
 
   transition: 0.3s;
 }
 
 
 .footer-social a:hover {
-  color: white;
+  color: #F1F5F9;
 
-  border-color: #ff6500;
+  border-color: #14B8A6;
 
   background: linear-gradient(
     135deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 
   transform: translateY(-3px);
@@ -199,7 +199,7 @@
 
   margin-bottom: 25px;
 
-  color: white;
+  color: #F1F5F9;
 
   font-size: 16px;
 }
@@ -222,18 +222,18 @@
 
   background: linear-gradient(
     90deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 }
 
 
 .footer-column > a {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 
-  color: #858796;
+   color: #cad4e3;
 
-  font-size: 13px;
+  font-size: 14px;
 
   text-decoration: none;
 
@@ -242,7 +242,7 @@
 
 
 .footer-column > a:hover {
-  color: #ff6900;
+  color: #38BDF8;
 
   padding-left: 4px;
 }
@@ -276,7 +276,9 @@
 
   justify-content: center;
 
-  background: rgba(255, 80, 0, 0.12);
+  background: rgba(20, 184, 166, 0.12);
+
+  color: #38BDF8;
 
   font-size: 13px;
 }
@@ -285,9 +287,9 @@
 .footer-contact-item p {
   margin: 0;
 
-  color: #858796;
+ color: #cad4e3;
 
-  font-size: 12px;
+  font-size: 14px;
 
   line-height: 1.6;
 }
@@ -299,7 +301,7 @@
 
 .footer-bottom {
   border-top: 1px solid
-    rgba(255, 255, 255, 0.07);
+    rgba(56, 189, 248, 0.1);
 }
 
 
@@ -321,7 +323,7 @@
 .footer-bottom p {
   margin: 0;
 
-  color: #666b7c;
+  color: #64748B;
 
   font-size: 11px;
 }
@@ -335,7 +337,7 @@
 
 
 .footer-legal a {
-  color: #666b7c;
+  color: #64748B;
 
   font-size: 11px;
 
@@ -346,7 +348,7 @@
 
 
 .footer-legal a:hover {
-  color: #ff6900;
+  color: #14B8A6;
 }
 
 

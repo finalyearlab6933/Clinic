@@ -1,7 +1,7 @@
 .about-section {
   padding: 110px 0;
 
-  background: #0d1025;
+  background: #071A2B;
 
   overflow: hidden;
 }
@@ -51,7 +51,7 @@
   background:
     radial-gradient(
       circle,
-      rgba(255, 80, 0, 0.5),
+      rgba(20, 184, 166, 0.35),
       transparent 70%
     );
 
@@ -73,7 +73,7 @@
   border-radius: 30px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.12);
+    rgba(56, 189, 248, 0.2);
 
   box-shadow:
     0 30px 60px
@@ -102,12 +102,12 @@
 
   border-radius: 15px;
 
-  background: rgba(30, 32, 48, 0.9);
+  background: rgba(11, 110, 153, 0.9);
 
   backdrop-filter: blur(12px);
 
   border: 1px solid
-    rgba(255, 255, 255, 0.12);
+    rgba(56, 189, 248, 0.2);
 
   box-shadow:
     0 15px 40px
@@ -133,7 +133,7 @@
 .about-patients strong {
   display: block;
 
-  color: #ff6900;
+  color: #38BDF8;
 
   font-size: 30px;
 }
@@ -141,7 +141,7 @@
 
 .about-experience span,
 .about-patients span {
-  color: #ddd;
+  color: #F1F5F9;
 
   font-size: 12px;
 }
@@ -150,7 +150,7 @@
 /* CONTENT */
 
 .about-label {
-  color: #ff6900;
+  color: #38BDF8;
 
   font-size: 13px;
 
@@ -159,7 +159,7 @@
   letter-spacing: 2px;
 
   border: 1px solid
-    rgba(255, 80, 0, 0.5);
+    rgba(56, 189, 248, 0.5);
 
   padding: 8px 17px;
 
@@ -170,7 +170,7 @@
 .about-content h2 {
   margin-top: 25px;
 
-  color: white;
+  color: #F1F5F9;
 
   font-size: 48px;
 
@@ -179,12 +179,12 @@
 
 
 .about-content h2 span {
-  color: #ff6500;
+  color: #14B8A6;
 }
 
 
 .about-content > p {
-  color: #999;
+  color: #94A3B8;
 
   font-size: 15px;
 
@@ -195,7 +195,7 @@
 
 
 .about-content .about-intro {
-  color: #ccc;
+  color: #F1F5F9;
 
   font-size: 17px;
 }
@@ -236,27 +236,27 @@
 
   justify-content: center;
 
-  color: white;
+  color: #F1F5F9;
 
   font-weight: bold;
 
   background: linear-gradient(
     135deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 }
 
 
 .about-feature h3 {
-  color: white;
+  color: #F1F5F9;
 
   font-size: 16px;
 }
 
 
 .about-feature p {
-  color: #888;
+  color: #94A3B8;
 
   font-size: 13px;
 
@@ -273,7 +273,7 @@
 
   border-radius: 30px;
 
-  color: white;
+  color: #F1F5F9;
 
   text-decoration: none;
 
@@ -281,8 +281,8 @@
 
   background: linear-gradient(
     90deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 
   transition: 0.3s;
@@ -294,7 +294,7 @@
 
   box-shadow:
     0 12px 30px
-    rgba(255, 70, 0, 0.3);
+    rgba(20, 184, 166, 0.3);
 }
 
 

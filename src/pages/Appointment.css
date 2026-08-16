@@ -4,11 +4,11 @@
   background:
     radial-gradient(
       circle at 80% 50%,
-      rgba(255, 70, 0, 0.2),
+      rgba(20, 184, 166, 0.2),
       transparent 35%
     ),
 
-    #0d1025;
+    #071A2B;
 }
 
 
@@ -33,7 +33,7 @@
 /* LEFT */
 
 .appointment-content > span {
-  color: #ff6500;
+  color: #38BDF8;
 
   font-size: 13px;
 
@@ -46,7 +46,7 @@
 .appointment-content h2 {
   margin-top: 20px;
 
-  color: white;
+  color: #F1F5F9;
 
   font-size: 50px;
 
@@ -57,14 +57,14 @@
 .appointment-content h2 strong {
   display: block;
 
-  color: #ff6500;
+  color: #14B8A6;
 }
 
 
 .appointment-content > p {
   margin-top: 20px;
 
-  color: #999;
+  color: #94A3B8;
 
   line-height: 1.8;
 
@@ -109,8 +109,8 @@
 
   background: linear-gradient(
     135deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 }
 
@@ -118,14 +118,14 @@
 .appointment-info small {
   display: block;
 
-  color: #777;
+  color: #94A3B8;
 }
 
 
 .appointment-info strong {
   display: block;
 
-  color: white;
+  color: #F1F5F9;
 
   margin-top: 3px;
 
@@ -143,12 +143,12 @@
   background:
     linear-gradient(
       145deg,
-      rgba(28, 31, 51, 0.95),
-      rgba(12, 14, 32, 0.95)
+      rgba(11, 110, 153, 0.35),
+      rgba(7, 26, 43, 0.95)
     );
 
   border: 1px solid
-    rgba(255, 255, 255, 0.1);
+    rgba(56, 189, 248, 0.2);
 
   box-shadow:
     0 30px 70px
@@ -157,14 +157,14 @@
 
 
 .appointment-form-box h3 {
-  color: white;
+  color: #F1F5F9;
 
   font-size: 26px;
 }
 
 
 .appointment-form-box > p {
-  color: #777;
+  color: #94A3B8;
 
   margin-top: 5px;
 
@@ -192,7 +192,7 @@
 
   margin-bottom: 7px;
 
-  color: #ccc;
+  color: #CBD5E1;
 
   font-size: 12px;
 }
@@ -206,15 +206,15 @@
   padding: 13px 15px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.1);
+    rgba(56, 189, 248, 0.18);
 
   border-radius: 10px;
 
   outline: none;
 
-  background: #0b0e21;
+  background: #071A2B;
 
-  color: white;
+  color: #F1F5F9;
 
   font-family: inherit;
 }
@@ -223,7 +223,11 @@
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #ff6500;
+  border-color: #38BDF8;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(56, 189, 248, 0.1);
 }
 
 
@@ -233,7 +237,9 @@
 
 
 .form-group select option {
-  background: #111429;
+  background: #071A2B;
+
+  color: #F1F5F9;
 }
 
 
@@ -246,7 +252,7 @@
 
   border-radius: 30px;
 
-  color: white;
+  color: #F1F5F9;
 
   font-weight: 600;
 
@@ -256,8 +262,8 @@
 
   background: linear-gradient(
     90deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 
   transition: 0.3s;
@@ -269,7 +275,7 @@
 
   box-shadow:
     0 12px 30px
-    rgba(255, 70, 0, 0.3);
+    rgba(20, 184, 166, 0.3);
 }
 
 
@@ -278,7 +284,7 @@
 
   text-align: center;
 
-  color: #666;
+  color: #64748B;
 
   margin-top: 12px;
 }

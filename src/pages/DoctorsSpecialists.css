@@ -1,7 +1,7 @@
 .doctors-section {
   padding: 110px 0;
 
-  background: #080a1c;
+  background: #071A2B;
 }
 
 
@@ -28,7 +28,7 @@
 
 .specialists-heading span,
 .doctors-heading span {
-  color: #ff6500;
+  color: #38BDF8;
 
   font-size: 13px;
 
@@ -42,7 +42,7 @@
 .doctors-heading h2 {
   margin-top: 15px;
 
-  color: white;
+  color: #F1F5F9;
 
   font-size: 42px;
 }
@@ -50,13 +50,13 @@
 
 .specialists-heading strong,
 .doctors-heading strong {
-  color: #ff6500;
+  color: #14B8A6;
 }
 
 
 .specialists-heading p,
 .doctors-heading p {
-  color: #999;
+  color: #94A3B8;
 
   line-height: 1.7;
 
@@ -88,13 +88,13 @@
   border-radius: 20px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.1);
+    rgba(56, 189, 248, 0.12);
 
   background:
     linear-gradient(
       145deg,
-      #15182d,
-      #0b0d20
+      rgba(11, 110, 153, 0.35),
+      #071A2B
     );
 
   transition: 0.3s;
@@ -104,11 +104,11 @@
 .specialist-card:hover {
   transform: translateY(-7px);
 
-  border-color: #ff6500;
+  border-color: #14B8A6;
 
   box-shadow:
     0 20px 45px
-    rgba(255, 70, 0, 0.12);
+    rgba(20, 184, 166, 0.15);
 }
 
 
@@ -127,27 +127,27 @@
 
   background: linear-gradient(
     135deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 
   font-size: 23px;
 
-  color: white;
+  color: #F1F5F9;
 
   margin-bottom: 20px;
 }
 
 
 .specialist-card h3 {
-  color: white;
+  color: #F1F5F9;
 
   font-size: 19px;
 }
 
 
 .specialist-card p {
-  color: #888;
+  color: #94A3B8;
 
   font-size: 13px;
 
@@ -174,11 +174,18 @@
 
   border-radius: 50%;
 
-  background: #7d291d;
+  background: #0B6E99;
 
-  color: white;
+  color: #F1F5F9;
 
   cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.specialist-card button:hover {
+  background: #14B8A6;
 }
 
 
@@ -206,10 +213,10 @@
 
   border-radius: 20px;
 
-  background: #111429;
+  background: #0B6E99;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.1);
+    rgba(56, 189, 248, 0.12);
 
   transition: 0.3s;
 }
@@ -218,7 +225,11 @@
 .doctor-card:hover {
   transform: translateY(-7px);
 
-  border-color: #ff6500;
+  border-color: #14B8A6;
+
+  box-shadow:
+    0 20px 40px
+    rgba(20, 184, 166, 0.12);
 }
 
 
@@ -229,7 +240,7 @@
 
   overflow: hidden;
 
-  background: #171a31;
+  background: #071A2B;
 }
 
 
@@ -260,11 +271,14 @@
 
   border-radius: 20px;
 
-  background: rgba(8, 10, 28, 0.85);
+  background: rgba(7, 26, 43, 0.9);
 
-  color: #ff7300;
+  color: #38BDF8;
 
   font-size: 11px;
+
+  border: 1px solid
+    rgba(56, 189, 248, 0.2);
 }
 
 
@@ -274,14 +288,14 @@
 
 
 .doctor-info h3 {
-  color: white;
+  color: #F1F5F9;
 
   font-size: 18px;
 }
 
 
 .doctor-info p {
-  color: #ff6500;
+  color: #38BDF8;
 
   font-size: 13px;
 
@@ -294,16 +308,18 @@
 
   margin-top: 18px;
 
-  color: #ccc;
+  color: #CBD5E1;
 
   font-size: 12px;
 
   text-decoration: none;
+
+  transition: 0.3s;
 }
 
 
 .doctor-info a:hover {
-  color: #ff6500;
+  color: #14B8A6;
 }
 
 
@@ -315,6 +331,7 @@
     grid-template-columns:
       repeat(2, 1fr);
   }
+
 
   .specialists-grid {
     grid-template-columns:
@@ -330,10 +347,12 @@
     padding: 0 20px;
   }
 
+
   .specialists-grid,
   .doctors-grid {
     grid-template-columns: 1fr;
   }
+
 
   .specialists-heading h2,
   .doctors-heading h2 {

@@ -12,17 +12,17 @@
   background:
     radial-gradient(
       circle at 70% 65%,
-      rgba(255, 70, 0, 0.35),
+      rgba(20, 184, 166, 0.30),
       transparent 30%
     ),
 
     radial-gradient(
       circle at 85% 40%,
-      rgba(255, 30, 0, 0.18),
+      rgba(56, 189, 248, 0.16),
       transparent 25%
     ),
 
-    #080a1c;
+    #071A2B;
 }
 
 
@@ -61,21 +61,21 @@
   padding: 9px 18px;
 
   border: 1px solid
-    rgba(255, 80, 0, 0.7);
+    rgba(20, 184, 166, 0.7);
 
   border-radius: 30px;
 
-  color: #ff7a00;
+  color: #38BDF8;
 
   font-size: 13px;
 
   margin-bottom: 25px;
 
   background: rgba(
-    255,
-    60,
-    0,
-    0.04
+    20,
+    184,
+    166,
+    0.06
   );
 }
 
@@ -83,26 +83,21 @@
 .hero h1 {
   margin: 0;
 
-  font-size: clamp(
-    50px,
-    5vw,
-    76px
-  );
+  font-size: 55px;
 
   line-height: 1.1;
 
-     font-size: 55px;
   letter-spacing: -2px;
 
-  color: white;
+  color: #F1F5F9;
 }
 
 
 .hero h1 span {
   background: linear-gradient(
     90deg,
-    #ed1c24,
-    #ff7a00
+    #38BDF8,
+    #14B8A6
   );
 
   -webkit-background-clip: text;
@@ -118,7 +113,7 @@
 
   margin-top: 25px;
 
-  color: #bfc1ca;
+  color: #B8C7D6;
 
   font-size: 17px;
 
@@ -154,8 +149,8 @@
 
   background: linear-gradient(
     90deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 
   color: white;
@@ -168,9 +163,9 @@
 
   box-shadow:
     0 10px 35px rgba(
-      255,
-      60,
-      0,
+      20,
+      184,
+      166,
       0.25
     );
 }
@@ -181,10 +176,10 @@
 
   box-shadow:
     0 15px 40px rgba(
-      255,
-      60,
-      0,
-      0.4
+      20,
+      184,
+      166,
+      0.40
     );
 }
 
@@ -200,7 +195,7 @@
 
   background: transparent;
 
-  color: white;
+  color: #F1F5F9;
 
   font-size: 15px;
 
@@ -216,7 +211,7 @@
   border-radius: 50%;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.4);
+    rgba(56, 189, 248, 0.45);
 
   display: flex;
 
@@ -225,6 +220,8 @@
   justify-content: center;
 
   font-size: 12px;
+
+  color: #38BDF8;
 }
 
 
@@ -264,10 +261,10 @@
 
   border-radius: 50%;
 
-  background: #ddd;
+  background: #E2E8F0;
 
   border: 2px solid
-    #080a1c;
+    #071A2B;
 
   display: flex;
 
@@ -289,7 +286,7 @@
 .hero-stats strong {
   display: block;
 
-  color: #ff6a00;
+  color: #14B8A6;
 
   font-size: 18px;
 }
@@ -298,7 +295,7 @@
 .hero-stats small {
   display: block;
 
-  color: #aaa;
+  color: #94A3B8;
 
   margin-top: 3px;
 }
@@ -329,6 +326,8 @@
 }
 
 
+/* Medical blue / teal glow */
+
 .orange-circle {
   position: absolute;
 
@@ -341,12 +340,12 @@
   background:
     radial-gradient(
       circle,
-      #ff7800 0%,
-      #e62d18 55%,
+      #14B8A6 0%,
+      #0B6E99 55%,
       transparent 70%
     );
 
-  opacity: 0.75;
+  opacity: 0.65;
 
   filter: blur(2px);
 }
@@ -393,16 +392,16 @@
   border-radius: 15px;
 
   background: rgba(
-    35,
-    37,
-    52,
-    0.85
+    15,
+    43,
+    61,
+    0.88
   );
 
   backdrop-filter: blur(12px);
 
   border: 1px solid
-    rgba(255, 255, 255, 0.12);
+    rgba(56, 189, 248, 0.15);
 
   box-shadow:
     0 15px 40px rgba(
@@ -423,8 +422,8 @@
 
   background: linear-gradient(
     135deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 
   display: flex;
@@ -440,7 +439,7 @@
 .floating-card strong {
   display: block;
 
-  color: white;
+  color: #F1F5F9;
 
   font-size: 28px;
 }
@@ -449,7 +448,7 @@
 .floating-card span {
   display: block;
 
-  color: #c5c5cc;
+  color: #AFC0CE;
 
   font-size: 11px;
 
@@ -483,12 +482,12 @@
 ========================= */
 
 .services-preview {
-  background: #080a1c;
+  background: #071A2B;
 
   padding: 75px 0 90px;
 
   border-top: 1px solid
-    rgba(255, 255, 255, 0.05);
+    rgba(56, 189, 248, 0.08);
 }
 
 
@@ -513,10 +512,10 @@
 
 
 .section-label {
-  color: #ff6a00;
+  color: #38BDF8;
 
   border: 1px solid
-    rgba(255, 80, 0, 0.5);
+    rgba(56, 189, 248, 0.45);
 
   padding: 8px 18px;
 
@@ -529,14 +528,14 @@
 .services-heading h2 {
   margin-top: 20px;
 
-  color: white;
+  color: #F1F5F9;
 
   font-size: 36px;
 }
 
 
 .services-heading h2 span {
-  color: #ff6200;
+  color: #14B8A6;
 }
 
 
@@ -546,7 +545,7 @@
 
 
 .services-right p {
-  color: #aaa;
+  color: #94A3B8;
 
   line-height: 1.6;
 }
@@ -559,15 +558,24 @@
 
   padding: 12px 20px;
 
-  border: 1px solid #ff6200;
+  border: 1px solid #14B8A6;
 
   border-radius: 25px;
 
-  color: white;
+  color: #F1F5F9;
 
   text-decoration: none;
 
   font-size: 13px;
+
+  transition: 0.3s;
+}
+
+
+.services-right a:hover {
+  background: #14B8A6;
+
+  color: white;
 }
 
 
@@ -595,13 +603,13 @@
   border-radius: 18px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.12);
+    rgba(56, 189, 248, 0.12);
 
   background:
     linear-gradient(
       145deg,
-      rgba(30, 33, 50, 0.9),
-      rgba(10, 12, 30, 0.9)
+      rgba(15, 43, 61, 0.95),
+      rgba(7, 26, 43, 0.95)
     );
 
   transition: 0.3s;
@@ -611,14 +619,14 @@
 .service-card:hover {
   transform: translateY(-8px);
 
-  border-color: #ff6200;
+  border-color: #14B8A6;
 
   box-shadow:
     0 15px 35px rgba(
-      255,
-      80,
-      0,
-      0.12
+      20,
+      184,
+      166,
+      0.15
     );
 }
 
@@ -640,8 +648,8 @@
 
   background: linear-gradient(
     135deg,
-    #ed1c24,
-    #ff7a00
+    #0B6E99,
+    #14B8A6
   );
 
   color: white;
@@ -651,14 +659,14 @@
 
 
 .service-card h3 {
-  color: white;
+  color: #F1F5F9;
 
   font-size: 17px;
 }
 
 
 .service-card p {
-  color: #999;
+  color: #94A3B8;
 
   font-size: 12px;
 
@@ -677,11 +685,20 @@
 
   border-radius: 50%;
 
-  background: #7c271b;
+  background: #0B6E99;
 
   color: white;
 
   cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.service-card button:hover {
+  background: #14B8A6;
+
+  transform: translateX(3px);
 }
 
 
@@ -695,27 +712,34 @@
     grid-template-columns: 1fr;
   }
 
+
   .hero-content {
     text-align: center;
   }
 
+
   .hero-description {
     margin-left: auto;
+
     margin-right: auto;
   }
+
 
   .hero-buttons,
   .hero-stats {
     justify-content: center;
   }
 
+
   .hero-image-area {
     height: 550px;
   }
 
+
   .doctor-image {
     height: 500px;
   }
+
 
   .service-cards {
     grid-template-columns:
@@ -731,10 +755,12 @@
     padding-top: 75px;
   }
 
+
   .hero-container {
     padding:
       50px 20px 0;
   }
+
 
   .hero h1 {
     font-size: 45px;
@@ -742,13 +768,16 @@
     letter-spacing: -1px;
   }
 
+
   .hero-buttons {
     flex-direction: column;
   }
 
+
   .hero-stats {
     flex-direction: column;
   }
+
 
   .rating {
     padding-left: 0;
@@ -756,13 +785,16 @@
     border-left: none;
   }
 
+
   .hero-image-area {
     height: 430px;
   }
 
+
   .doctor-image {
     height: 420px;
   }
+
 
   .orange-circle {
     width: 380px;
@@ -770,9 +802,11 @@
     height: 380px;
   }
 
+
   .floating-card {
     transform: scale(0.75);
   }
+
 
   .experience {
     top: 30px;
@@ -780,11 +814,13 @@
     right: -20px;
   }
 
+
   .specialist {
     top: 160px;
 
     right: -30px;
   }
+
 
   .patients-card {
     bottom: 20px;
@@ -792,15 +828,18 @@
     right: -20px;
   }
 
+
   .services-heading {
     flex-direction: column;
 
     align-items: flex-start;
   }
 
+
   .services-heading h2 {
     font-size: 28px;
   }
+
 
   .service-cards {
     grid-template-columns:
