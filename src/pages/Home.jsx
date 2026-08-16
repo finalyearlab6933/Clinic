@@ -1,3 +1,6 @@
+import doctor from "../assets/doctor.png";
+
+<img src={doctor} alt="Doctor" />
 import "./Home.css";
 
 function Home() {
@@ -122,7 +125,7 @@ function Home() {
             {/* Doctor image */}
 
             <img 
-              src="../src/assets/hero.png"
+              src={doctor}
               alt="Doctor"
               className="doctor-image"
             />
