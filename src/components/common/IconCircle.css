@@ -1,0 +1,55 @@
+/* ============================================================
+   IconCircle — circular icon container
+   ============================================================ */
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: transform var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.icon-circle svg {
+  width: 50%;
+  height: 50%;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────── */
+.icon-circle--sm {
+  width: 32px;
+  height: 32px;
+}
+.icon-circle--md {
+  width: 44px;
+  height: 44px;
+}
+.icon-circle--lg {
+  width: 56px;
+  height: 56px;
+}
+.icon-circle--xl {
+  width: 72px;
+  height: 72px;
+}
+
+/* ─── Variants ──────────────────────────────────────────── */
+.icon-circle--light {
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary);
+}
+.icon-circle--solid {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.icon-circle--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary-border);
+}
+.icon-circle--muted {
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+}

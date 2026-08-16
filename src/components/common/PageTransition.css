@@ -1,0 +1,26 @@
+/* ============================================================
+   PageTransition — fade-up on every route change
+   ============================================================ */
+
+.page-transition {
+  width: 100%;
+  min-height: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-transition--enter {
+    animation: page-transition-enter var(--duration-medium)
+      var(--ease-entrance) both;
+  }
+}
+
+@keyframes page-transition-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

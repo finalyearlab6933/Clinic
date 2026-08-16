@@ -1,0 +1,10 @@
+/* ============================================================
+   AnimatedNumber — tabular-nums so digits don't jitter
+   ============================================================ */
+
+.animated-number {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+  letter-spacing: -0.02em;
+}

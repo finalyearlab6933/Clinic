@@ -1,108 +1,18 @@
-* {
-  margin: 0;
+/* ============================================================
+   App-level layout styles
+   ------------------------------------------------------------
+   Tokens come from `theme/variables.css`. Do NOT hardcode
+   colors, spacing, or radii here.
+   ============================================================ */
 
-  padding: 0;
-
-  box-sizing: border-box;
+.app-main {
+  flex: 1;
+  width: 100%;
+  margin-top: var(--header-height);
 }
 
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-body {
-  font-family:
-    "Poppins",
-    "Segoe UI",
-    sans-serif;
-
-  background: #080a1c;
-
-  color: white;
-}
-
-
-.app {
-  min-height: 100vh;
-}
-
-
-.simple-section {
-  min-height: 500px;
-
-  padding: 120px 8%;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: center;
-
-  text-align: center;
-
-  background: #080a1c;
-
-  border-top: 1px solid
-    rgba(255, 255, 255, 0.05);
-}
-
-
-.simple-section:nth-child(even) {
-  background: #0d1025;
-}
-
-
-.simple-section span {
-  color: #ff6500;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
-  letter-spacing: 2px;
-}
-
-
-.simple-section h2 {
-  margin-top: 15px;
-
-  font-size: 40px;
-}
-
-
-.simple-section p {
-  max-width: 650px;
-
-  margin-top: 20px;
-
-  color: #aaa;
-
-  line-height: 1.8;
-}
-
-
-.appointment-btn {
-  margin-top: 30px;
-
-  padding: 15px 30px;
-
-  border: none;
-
-  border-radius: 30px;
-
-  color: white;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  background: linear-gradient(
-    90deg,
-    #ed1c24,
-    #ff7a00
-  );
+@media (max-width: 700px) {
+  .app-main {
+    margin-top: var(--header-height-mobile);
+  }
 }

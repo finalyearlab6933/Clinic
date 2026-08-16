@@ -1,0 +1,31 @@
+/* ============================================================
+   AnimatedSection — fade-up on viewport entry
+   ============================================================ */
+
+.animated-section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition-delay: var(--anim-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.animated-section--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animated-section {
+    transition: opacity var(--duration-medium) var(--ease-entrance),
+      transform var(--duration-medium) var(--ease-entrance);
+  }
+}
+
+/* Reduced motion → instant visibility, no transition */
+@media (prefers-reduced-motion: reduce) {
+  .animated-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
