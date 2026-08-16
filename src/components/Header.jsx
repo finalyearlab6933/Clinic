@@ -1,20 +1,33 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="header">
 
       <div className="header-container">
 
         {/* Logo */}
-        <Link to="/" className="logo">
+        <Link
+          to="/"
+          className="logo"
+          onClick={closeMenu}
+        >
 
           <div className="logo-icon">
             ✚
           </div>
 
           <div className="logo-text">
+
             <span className="logo-main">
               CARE <strong>PLUS</strong>
             </span>
@@ -22,31 +35,32 @@ function Header() {
             <span className="logo-sub">
               CLINIC
             </span>
+
           </div>
 
         </Link>
 
 
         {/* Navigation */}
-        <nav className="navbar">
+        <nav className={`navbar ${menuOpen ? "mobile-open" : ""}`}>
 
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             Home
           </Link>
 
-          <Link to="/about">
+          <Link to="/about" onClick={closeMenu}>
             About
           </Link>
 
-          <Link to="/specialists">
+          <Link to="/specialists" onClick={closeMenu}>
             Specialists
           </Link>
 
-          <Link to="/appointment">
+          <Link to="/appointment" onClick={closeMenu}>
             Appointment
           </Link>
 
-          <Link to="/contact">
+          <Link to="/contact" onClick={closeMenu}>
             Contact
           </Link>
 
@@ -64,6 +78,7 @@ function Header() {
             </div>
 
             <div>
+
               <strong>
                 +91 98765 43210
               </strong>
@@ -71,15 +86,17 @@ function Header() {
               <small>
                 Mon - Sat (9:00AM - 8:00PM)
               </small>
+
             </div>
 
           </div>
 
 
-          {/* Book Appointment Button */}
+          {/* Book Appointment */}
           <Link
             to="/appointment"
             className="header-appointment"
+            onClick={closeMenu}
           >
             <span>▣</span>
             Book Appointment
@@ -90,8 +107,10 @@ function Header() {
           <button
             className="menu-btn"
             type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation"
           >
-            ☰
+            {menuOpen ? "✕" : "☰"}
           </button>
 
         </div>

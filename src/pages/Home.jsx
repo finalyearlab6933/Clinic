@@ -1,5 +1,5 @@
 import doctor from "../assets/doctor.png";
-
+import { Link } from "react-router-dom";
 <img src={doctor} alt="Doctor" />
 import "./Home.css";
 
@@ -45,14 +45,13 @@ function Home() {
 
             <div className="hero-buttons">
 
-              <a
-                href="/appointment"
-                className="primary-btn"
-              >
-                <span>▣</span>
-
-                Book Appointment
-              </a>
+              <Link
+  to="/appointment"
+  className="primary-btn"
+>
+  <span>▣</span>
+  Book Appointment
+</Link>
 
 
               <button className="video-btn">
