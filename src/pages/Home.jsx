@@ -58,7 +58,7 @@ function Home() {
                   ▶
                 </span>
 
-                Watch Video
+                Watch Videoo
 
               </button>
 
