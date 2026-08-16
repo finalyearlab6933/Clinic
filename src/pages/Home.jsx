@@ -46,7 +46,7 @@ function Home() {
             <div className="hero-buttons">
 
               <a
-                href="#appointment"
+                href="/appointment"
                 className="primary-btn"
               >
                 <span>▣</span>
