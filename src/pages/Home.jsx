@@ -28,7 +28,7 @@ function Home() {
               <br />
 
               <span>
-                Better Health...
+                Better Health
               </span>
             </h1>
 
