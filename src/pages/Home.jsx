@@ -119,10 +119,7 @@ function Home() {
                   <span>R</span>
                   <span>S</span>
                 </div>
-                <div>
-                  <strong>5,000+</strong>
-                  <small>Happy Patients</small>
-                </div>
+               
               </div>
 
               <div className="hero-trust__divider" />
